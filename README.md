@@ -1,4 +1,23 @@
-# Relation Port client
+# Withdrawn Relation helper
+
+`univers-aip-lib-relation-client@0.1.0` is withdrawn and yanked from the Univers
+Registry. Its coordination of canonical edge identity, recorded time and replay
+belongs to World authority, not to a generic client library. Do not add it to new
+consumers. Existing immutable artifacts and source history remain available.
+
+Use the public World Relation intent contracts and
+[`univers-aip-contracts-world-ipc`](https://github.com/hsudatalks/univers-aip-contracts-world-ipc)
+wire values with an owner adapter. Trusted Host issuance, World semantic acceptance
+and original durable receipts remain with their respective owners. A caller's
+owner label or a later equal read is not authentication or a canonical receipt.
+
+The last identified production consumer, Resource, removed this dependency in
+`0ad7b8fbb63d0555379cbe65324c1318dd32f01d`, with independent owner checks and builds.
+No active owner Cargo manifest or lock in the current `univers-aip` checkout
+inventory references this package; this observation is not a claim about
+unseen external consumers. Existing lockfiles can continue to fetch yanked artifacts.
+
+## Historical interface (retained for source readers)
 
 `univers-aip-lib-relation-client@0.1.0` exposes `WorldRelationClient` at the crate
 root and under `relation`. Construct it with a caller-selected public
