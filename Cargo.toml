@@ -1,0 +1,23 @@
+[package]
+name="univers-aip-lib-relation-client"
+version="0.1.0"
+edition="2021"
+rust-version="1.89"
+license="MIT OR Apache-2.0"
+description="Retry-safe relation coordination over the pure public World Relation Port"
+repository="https://github.com/hsudatalks/univers-aip-libs-rs-relation-client"
+publish=["univers"]
+readme="README.md"
+include=["Cargo.toml","Cargo.lock","README.md","src/**","tests/**","scripts/**",".cargo/config.toml"]
+[workspace]
+members=["."]
+resolver="2"
+[dependencies]
+chrono={version="0.4",features=["clock"]}
+serde_json="1"
+uuid={version="1",features=["v5"]}
+univers-aip-contracts-data={version=">=1.0.0-rc.1, <1.0.0",registry="univers",default-features=false,features=["core"]}
+univers-aip-contracts-world={version=">=1.0.0-rc.1, <1.0.0",registry="univers",default-features=false,features=["relation","relation-world"]}
+[dev-dependencies]
+async-trait="0.1"
+tokio={version="1",features=["macros","rt"]}
